@@ -1,0 +1,52 @@
+.friends-main{
+    background-image: url("images/space_background.png");
+    background-repeat: no-repeat;
+    display:flex;
+    height:100vh;
+}
+
+.navigation-bar{
+    background-color: rgba(161, 161, 161, 0.3);
+    display:flex;
+    flex-direction: column;
+    opacity:50%;
+}
+
+.navigation-bar button{
+    background-color: rgba(161, 161, 161, 0.05);
+    background-size:100%;
+    background-repeat: no-repeat;
+    width:100px;
+    height:100px;
+    opacity:50%;
+    border:none;
+    transition: background-color 1s ease;
+}
+
+.navigation-bar button:hover{
+    background-color:rgba(255, 246, 115, 1);
+    opacity:100%;
+    animation: background-color
+}
+
+.navigation-bar__friends{
+    background-image: url("images/friends.PNG");
+}
+
+.navigation-bar__chatting{
+    background-image: url("images/spaceship.png");
+}
+
+.navigation-bar__else{
+    background-image: url("images/else.PNG");
+    background-position-y: 10px;
+}
+
+.friends-list__search{
+    background-image:url("images/search.png");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    padding: 0px 60px;
+    width: 350px;
+}
