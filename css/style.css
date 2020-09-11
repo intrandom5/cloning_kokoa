@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import "css/reset.css";
+@import "reset.css";
 
 @import "screen/login.css";
 @import "components/status-bar.css";
