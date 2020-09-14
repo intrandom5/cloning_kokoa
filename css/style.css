@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import "reset.css";
 
+@import "components/variables.css";
 @import "screen/login.css";
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
 @import "screen/friends.css";
+@import "components/user-component.css";
+@import "components/badge.css";
 
 body {
     color: #2e363e;
     font-family: "Oswald", sans-serif;
-    height: 1000vh;
+    height: 200vh;
+}
+
+.main-screen{
+    padding: 0px var(--horizontal-space);
 }
