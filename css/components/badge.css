@@ -8,6 +8,22 @@
     align-items:center;
     color: white;
     font-weight: 400;
-    left:20px;
-    bottom: 18px;
+}
+
+.small-badge{
+    background-color: tomato;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    color: white;
+    font-weight: 400;
+}
+
+.small-badge-place{
+    position: absolute;
+    left:30px;
+    bottom:25px;
 }

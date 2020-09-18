@@ -1,3 +1,5 @@
 :root{
     --horizontal-space: 25px;
+    --grey-border: 1px solid rgba(0,0,0,0.3);
+    --grey-font: rgba(0,0,0,0.5);
 }

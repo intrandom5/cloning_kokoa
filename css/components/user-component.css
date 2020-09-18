@@ -1,5 +1,6 @@
 .user-component{
     justify-content: space-between;
+    margin-bottom:10px;
 }
 
 .user-component,
@@ -25,7 +26,7 @@
     margin-bottom:5px;
 }
 
-.user_component__subtitle {
+.user-component__subtitle {
     margin-top:5px;
     color: rgba(0, 0, 0, 0.3);
 }
@@ -46,7 +47,7 @@
 }
 
 .user-component__column:last-child{
-    color:rgba(0,0,0,0.5);
+    color:var(--grey-font);
     display:flex;
     flex-direction:column;
     align-items: flex-end;
