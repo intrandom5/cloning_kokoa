@@ -1,3 +1,7 @@
+.login-display {
+    margin: 0px 15px;
+}
+
 .welcome-header {
     display:flex;
     flex-direction: column;
