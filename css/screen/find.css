@@ -102,3 +102,22 @@
 .open-post__like span{
     margin-left: 3px;
 }
+
+@keyframes heart-beat{
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(2);
+    }
+    100%{
+        color: white;
+    }
+}
+
+.open-post__like:hover i{
+    will-change: transform;
+    animation:heart-beat 1s linear infinite;
+}

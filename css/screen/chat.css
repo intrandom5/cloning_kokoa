@@ -33,14 +33,46 @@
     margin-bottom:10px;
 }
 
+@keyframes message-pop-left{
+    from{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes message-pop-right{
+    from{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 .message-row{
     width: 100%;
     display: flex;
+    opacity: 0;
+    transform: translateX(-30px);
     margin-bottom: 20px;
+}
+.message-row:nth-child(even){
+    animation: message-pop-left 1s ease-in-out forwards;
 }
 
 .message-row:nth-child(odd){
+    animation: message-pop-right 1s ease-in-out forwards;
     justify-content: flex-end;
+}
+.message-row:nth-child(3){
+    animation-delay: 1s;
+}
+.message-row:nth-child(4){
+    animation-delay: 2s;
 }
 
 .message-row img{
@@ -93,6 +125,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 .reply i{
@@ -110,22 +143,25 @@
 }
 
 .reply input{
-    height: 30px;
+    height: 45px;
     width: 100%;
     border: var(--grey-border);
     border-radius: 20px;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    font-size: 20px;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button{
     position: absolute;
     right: 4px;
-    bottom: 3px;
+    bottom: 9px;
 }
 
 .reply__column:last-child > i{
     right: 40px;
-    top:9px;
+    top:13px;
 }
 
 .reply__column button{
@@ -139,4 +175,24 @@
 .reply__column button:focus,
 .reply__column button:active {
     outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button{
+    transition: opacity .4s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+    opacity: 0;
+}
+
+.reply:focus-within input{
+    width: 95vw;
+    transform: translateX(-10%) translateY(-80px);
+}
+
+.reply:focus-within{
+    transform: translateY(80px);
 }

@@ -2,10 +2,11 @@
     position: fixed;
     bottom:0;
     width: 100%;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     padding: 20px 60px;
     box-sizing: border-box;
     border-top:1px solid rgba(121, 121, 121 ,0.3);
+    z-index:1;
 }
 
 .nav_list {
@@ -18,8 +19,47 @@
     color: #171618;
 }
 
+@keyframes notification-animation{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: none;
+    }
+}
+
 .nav__notification{
     position: absolute;
     left:18px;
     bottom:15px;
+    animation: notification-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes appear-btn-anim{
+    from {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    to{ 
+        transform: none;
+        opacity: 1;
+    }
+}
+.nav__btn{
+    transform: translateY(70px);
+    opacity: 0;
+    animation: appear-btn-anim 0.5s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2){
+    animation-delay: 0.3s;
+}
+.nav__btn:nth-child(3){
+    animation-delay: 0.6s;
+}
+.nav__btn:nth-child(4){
+    animation-delay: 0.9s;
 }
